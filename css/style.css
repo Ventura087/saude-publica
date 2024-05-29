@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@400;500;600;700;900&display=swap');
+
+:root {
+  --laranja: #0429cc;
+  --background: #1E1E1E;
+  --cinza: #232323;
+  --branco: #ffffff;
+  --cinza-fonte: #C7C7C7;
+  --cinza-borda: #494949;
+  --cinza-claro: #b7b7b7;
+  --botao-hover: #1f66ffcf;
+  --fonte-principal: 'Inter', sans-serif;
+  --fonte-segundaria: 'Gloria Hallelujah', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+  background: var(--background);
+  color: var(--branco);
+  letter-spacing: 0.3px;
+  line-height: 1.25em;
+  font-size: 16px;
+}
+
+.palavra-azul {
+  text-align: 300px;
+  font-size: 160px;
+  color: rgb(0, 0, 80);
+}
+
+.palavra-segun{
+  color: #4973e6f8;
+  font-size:x-large;
+}
+
+
+.palavra-laranja {
+  color: var(--laranja);
+}
+
+/*cabecalho - navbar*/
+.nav {
+  height: 10vh;
+  padding: 24px 0;
+  background: var(--laranja);
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.navbar-esquerda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.imagem-cabecalho {
+  width: 50%;
+  max-width: 200px;
+  padding: 16px 0;
+}
+
+.span-cabecalho {
+  font-family: var(--fonte-segundaria);
+  font-size: 1.01em;
+}
+
+a:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+  color: var(--branco);
+}
+
+.cabecalho-link {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    height: 8vh;
+    padding: 36px;
+    gap: 24px;
+  }
+
+  .span-cabecalho {
+    font-size: 1.1em;
+  }
+
+  .imagem-cabecalho {
+    max-width: none;
+    width: 35%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .imagem-cabecalho {
+    width: 55%;
+  }
+
+  .navbar-direita {
+    display: flex;
+    gap: 24px;
+  }
+
+  .cabecalho-link {
+    display: block;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+}
+
+/*seção contato*/
+.secao-contato {
+  height: 80vh;
+  background: url(../assets/img/Trabalhos/Blocoporbloco.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.secao-contato_conteudo {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.titulo-principal {
+  font-size: 2.1em;
+  font-weight: 700;
+}
+
+.secao-contato_paragrafo {
+  font-weight: 500;
+  margin: 0 10vw;
+  text-align: center;
+}
+
+.secao-contato_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--laranja);
+  padding: 16px 32px;
+  border-radius: 4px;
+  gap: 16px;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.secao-contato_link:hover {
+  background-color: var(--botao-hover);
+}
+
+.secao-contato_link:active {
+  transform: scale(0.95);
+}
+
+.secao-contato_icone {
+  width: 30px;
+}
+
+.seta-baixo {
+  display: block;
+  position: relative;
+  width: 22px;
+  margin: 32px auto 64px auto;
+  animation: setinha-cima .5s linear 1s infinite alternate;
+}
+
+@keyframes setinha-cima {
+  0%   {top:0px;}
+  50%  {top:10px;}
+  100% {top:20px;}
+}
+
+@media (min-width: 768px) {
+  .secao-contato_link {
+    padding: 20px 36px;
+  }
+
+  .secao-contato_icone {
+    width: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titulo-principal {
+    font-size: 3em;
+  }
+
+  .secao-contato_paragrafo {
+    font-size: 1.3em;
+    width: 500px;
+  }
+
+  .secao-contato_link {
+    padding: 12px 24px;
+  }
+}
+
+/*Seção Principal*/
+
+/*Artigo Apresentação*/
+
+.artigo-apresentacao_titulo {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0 24px;
+  margin-bottom: 16px;
+}
+
+.artigo-apresentacao_texto {
+  margin: 0 4vw;
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--cinza-fonte);
+}
+
+.secao_subtitulo {
+  margin: 12vh 0 5vh 0;
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px){
+  .artigo-apresentacao_titulo{
+    font-size: 2em
+  }
+
+  .artigo-apresentacao_texto {
+    font-size: 1.3em;
+    margin: 0 10vw;
+  }
+}
+
+/*Card*/
+.card {
+  background: var(--cinza);
+  margin: 0 auto 10vh auto;
+  width: 90%;
+  text-align: center;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+}
+
+.card-conteudo {
+  padding: 1.5em;
+}
+
+.card-conteudo_titulo {
+  font-size: 1.2em;
+  margin: 16px 0;
+  font-weight: 700;
+}
+
+.card-conteudo_texto {
+  font-size: 0.9em;
+}
+
+.card-imagem {
+  width: 100%;
+  border-radius: 0px 0px 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .card-conteudo_texto {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    min-height: 40vh;
+    width: 80vw;
+  }
+
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .card-conteudo_titulo {
+    padding-bottom: 0.5em;
+    font-size: 1.75em;
+  } 
+
+  .card-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding: 0 1.5em;
+  }
+
+  .card-imagem {
+    width: 40%;
+  }
+}
+
+/*Artigo Trabalho*/
+
+.imagem_ativo {
+  display: block;
+}
+
+.artigo-trabalhos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.carousel-help {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.8em;
+  align-self: flex-start;
+  margin-left: 10vw;
+}
+
+.carousel-help img {
+  width: 10px;
+  transform: rotate(-90deg);
+  animation: setinha-direita .5s linear 1s infinite alternate;
+  position: relative;
+}
+
+@keyframes setinha-direita {
+  0%   {left:0px;}
+  50%  {left:5px;}
+  100% {left:8px;}
+}
+
+@media (min-width: 570px) {
+  .carousel-help {
+    display: none;
+  }
+}
+
+/* Carrousel */
+
+.carousel {
+  width: 85vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-indicators {
+  display: flex;
+  position: static;
+  overflow-x: scroll;
+  justify-content: initial;
+  z-index: 0;
+  margin: 0;
+}
+
+.trabalhos_botao {
+  padding: 12px 18px;
+  background: var(--cinza);
+  border: 1px solid var(--cinza-borda);
+  color: var(--branco);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.trabalhos_botao:first-child {
+  background: var(--cinza) !important;
+}
+
+.carousel-indicators .active {
+  background: rgba(29, 29, 29, 1) 100% !important;
+}
+
+.carousel-indicators li::before,
+.carousel-indicators li::after {
+  content: none;
+}
+
+.carousel-indicators li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  width: 30vw;
+  height: auto;
+  text-indent: initial;
+  cursor: pointer;
+  background-color: var(--cinza);
+  margin: 0;
+}
+
+@media (min-width : 768px) {
+  .artigo-trabalhos_botoes {
+    width: 90%;
+  }
+
+  .trabalhos_botao {
+    padding: 16px 30px;
+  }
+
+  .trabalhos_botao:last-child {
+    border-radius: 0 5px 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .artigo-trabalhos {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel {
+    width: 70vw;
+    flex-direction: row;
+  }
+  
+  .carousel-inner {
+    height: auto;
+  }
+
+  .carousel-indicators {
+    flex-direction: column;
+    overflow: initial;
+    justify-content: center;
+  }
+  
+  .carousel-indicators li {
+    height: 20%;
+    font-size: 1.5em;
+  }
+}
+
+/*rodape*/
+.rodape {
+  border-top: 2px solid var(--laranja);
+}
+
+.rodape-informacoes {
+  margin: 2em 0 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.rodape-logo {
+  width: 40%;
+}
+
+.rodape-info_proprietario {
+  font-size: 0.8em;
+  color: var(--cinza-claro);
+}
+
+.rodape-contatos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 0.5em;
+}
+
+.rodape-rede_social:hover,
+.rodape-rede_social:active {
+  filter: contrast(200%);
+}
+
+@media (min-width: 1024px) {
+  .rodape {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rodape-informacoes {
+    margin: 2em 0 2em 2em;
+  }
+
+  .rodape-informacoes p {
+    margin: 0;
+  }
+
+  .rodape-informacoes p:first-child {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  .rodape-logo {
+    width: 50%;
+  }
+
+  .rodape-contatos {
+    margin: 0 2em 0 0;
+  }
+
+  .rodape-rede_social {
+    width: 45px;
+  }
+}
